@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package syntax_tree;
+
+// Define a simple representation of an Abstract Syntax Tree (AST) node
+message ASTNode {
+    enum NodeType {
+        FUNCTION = 0;
+        VARIABLE = 1;
+        LITERAL = 2;
+        OPERATOR = 3;
+    }
+
+    NodeType type = 1;
+    string name = 2;
+    repeated ASTNode children = 3;
+    string value = 4;
+}
+
+// Define the full syntax tree
+message SyntaxTree {
+    ASTNode root = 1;
+}

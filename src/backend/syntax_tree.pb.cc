@@ -6,130 +6,172 @@
 #include <algorithm>
 
 #include <google/protobuf/stubs/common.h>
+#include <google/protobuf/stubs/port.h>
 #include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
 #include <google/protobuf/wire_format_lite_inl.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
+// This is a temporary google only hack
+#ifdef GOOGLE_PROTOBUF_ENFORCE_UNIQUENESS
+#include "third_party/protobuf/version.h"
+#endif
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
-extern PROTOBUF_INTERNAL_EXPORT_syntax_5ftree_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ASTNode_syntax_5ftree_2eproto;
-namespace syntax_tree {
-class ASTNodeDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<ASTNode> _instance;
-} _ASTNode_default_instance_;
-class SyntaxTreeDefaultTypeInternal {
- public:
-  ::google::protobuf::internal::ExplicitlyConstructed<SyntaxTree> _instance;
-} _SyntaxTree_default_instance_;
-}  // namespace syntax_tree
-static void InitDefaultsASTNode_syntax_5ftree_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
+namespace protobuf_syntax_5ftree_2eproto
+{
+  extern PROTOBUF_INTERNAL_EXPORT_protobuf_syntax_5ftree_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ASTNode;
+} // namespace protobuf_syntax_5ftree_2eproto
+namespace syntax_tree
+{
+  class ASTNodeDefaultTypeInternal
   {
-    void* ptr = &::syntax_tree::_ASTNode_default_instance_;
-    new (ptr) ::syntax_tree::ASTNode();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  public:
+    ::google::protobuf::internal::ExplicitlyConstructed<ASTNode>
+        _instance;
+  } _ASTNode_default_instance_;
+  class SyntaxTreeDefaultTypeInternal
+  {
+  public:
+    ::google::protobuf::internal::ExplicitlyConstructed<SyntaxTree>
+        _instance;
+  } _SyntaxTree_default_instance_;
+} // namespace syntax_tree
+namespace protobuf_syntax_5ftree_2eproto
+{
+  static void InitDefaultsASTNode()
+  {
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+    {
+      void *ptr = &::syntax_tree::_ASTNode_default_instance_;
+      new (ptr)::syntax_tree::ASTNode();
+      ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    }
+    ::syntax_tree::ASTNode::InitAsDefaultInstance();
   }
-  ::syntax_tree::ASTNode::InitAsDefaultInstance();
-}
 
-::google::protobuf::internal::SCCInfo<0> scc_info_ASTNode_syntax_5ftree_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsASTNode_syntax_5ftree_2eproto}, {}};
+  ::google::protobuf::internal::SCCInfo<0> scc_info_ASTNode =
+      {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsASTNode}, {}};
 
-static void InitDefaultsSyntaxTree_syntax_5ftree_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
+  static void InitDefaultsSyntaxTree()
   {
-    void* ptr = &::syntax_tree::_SyntaxTree_default_instance_;
-    new (ptr) ::syntax_tree::SyntaxTree();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+    {
+      void *ptr = &::syntax_tree::_SyntaxTree_default_instance_;
+      new (ptr)::syntax_tree::SyntaxTree();
+      ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    }
+    ::syntax_tree::SyntaxTree::InitAsDefaultInstance();
   }
-  ::syntax_tree::SyntaxTree::InitAsDefaultInstance();
-}
 
-::google::protobuf::internal::SCCInfo<1> scc_info_SyntaxTree_syntax_5ftree_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSyntaxTree_syntax_5ftree_2eproto}, {
-      &scc_info_ASTNode_syntax_5ftree_2eproto.base,}};
+  ::google::protobuf::internal::SCCInfo<1> scc_info_SyntaxTree =
+      {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsSyntaxTree}, {
+                                                                                                                    &protobuf_syntax_5ftree_2eproto::scc_info_ASTNode.base,
+                                                                                                                }};
 
-void InitDefaults_syntax_5ftree_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_ASTNode_syntax_5ftree_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_SyntaxTree_syntax_5ftree_2eproto.base);
-}
-
-::google::protobuf::Metadata file_level_metadata_syntax_5ftree_2eproto[2];
-const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_syntax_5ftree_2eproto[1];
-constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_syntax_5ftree_2eproto = nullptr;
-
-const ::google::protobuf::uint32 TableStruct_syntax_5ftree_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::syntax_tree::ASTNode, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::syntax_tree::ASTNode, type_),
-  PROTOBUF_FIELD_OFFSET(::syntax_tree::ASTNode, name_),
-  PROTOBUF_FIELD_OFFSET(::syntax_tree::ASTNode, children_),
-  PROTOBUF_FIELD_OFFSET(::syntax_tree::ASTNode, value_),
-  ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::syntax_tree::SyntaxTree, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::syntax_tree::SyntaxTree, root_),
-};
-static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::syntax_tree::ASTNode)},
-  { 9, -1, sizeof(::syntax_tree::SyntaxTree)},
-};
-
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::syntax_tree::_ASTNode_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::syntax_tree::_SyntaxTree_default_instance_),
-};
-
-::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_syntax_5ftree_2eproto = {
-  {}, AddDescriptors_syntax_5ftree_2eproto, "syntax_tree.proto", schemas,
-  file_default_instances, TableStruct_syntax_5ftree_2eproto::offsets,
-  file_level_metadata_syntax_5ftree_2eproto, 2, file_level_enum_descriptors_syntax_5ftree_2eproto, file_level_service_descriptors_syntax_5ftree_2eproto,
-};
-
-const char descriptor_table_protodef_syntax_5ftree_2eproto[] =
-  "\n\021syntax_tree.proto\022\013syntax_tree\"\276\001\n\007AST"
-  "Node\022+\n\004type\030\001 \001(\0162\035.syntax_tree.ASTNode"
-  ".NodeType\022\014\n\004name\030\002 \001(\t\022&\n\010children\030\003 \003("
-  "\0132\024.syntax_tree.ASTNode\022\r\n\005value\030\004 \001(\t\"A"
-  "\n\010NodeType\022\014\n\010FUNCTION\020\000\022\014\n\010VARIABLE\020\001\022\013"
-  "\n\007LITERAL\020\002\022\014\n\010OPERATOR\020\003\"0\n\nSyntaxTree\022"
-  "\"\n\004root\030\001 \001(\0132\024.syntax_tree.ASTNodeb\006pro"
-  "to3"
-  ;
-::google::protobuf::internal::DescriptorTable descriptor_table_syntax_5ftree_2eproto = {
-  false, InitDefaults_syntax_5ftree_2eproto, 
-  descriptor_table_protodef_syntax_5ftree_2eproto,
-  "syntax_tree.proto", &assign_descriptors_table_syntax_5ftree_2eproto, 283,
-};
-
-void AddDescriptors_syntax_5ftree_2eproto() {
-  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
+  void InitDefaults()
   {
+    ::google::protobuf::internal::InitSCC(&scc_info_ASTNode.base);
+    ::google::protobuf::internal::InitSCC(&scc_info_SyntaxTree.base);
+  }
+
+  ::google::protobuf::Metadata file_level_metadata[2];
+  const ::google::protobuf::EnumDescriptor *file_level_enum_descriptors[1];
+
+  const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      ~0u, // no _has_bits_
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::syntax_tree::ASTNode, _internal_metadata_),
+      ~0u, // no _extensions_
+      ~0u, // no _oneof_case_
+      ~0u, // no _weak_field_map_
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::syntax_tree::ASTNode, type_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::syntax_tree::ASTNode, name_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::syntax_tree::ASTNode, children_),
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::syntax_tree::ASTNode, value_),
+      ~0u, // no _has_bits_
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::syntax_tree::SyntaxTree, _internal_metadata_),
+      ~0u, // no _extensions_
+      ~0u, // no _oneof_case_
+      ~0u, // no _weak_field_map_
+      GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(::syntax_tree::SyntaxTree, root_),
   };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_syntax_5ftree_2eproto, deps, 0);
-}
+  static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+      {0, -1, sizeof(::syntax_tree::ASTNode)},
+      {9, -1, sizeof(::syntax_tree::SyntaxTree)},
+  };
 
-// Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_syntax_5ftree_2eproto = []() { AddDescriptors_syntax_5ftree_2eproto(); return true; }();
-namespace syntax_tree {
-const ::google::protobuf::EnumDescriptor* ASTNode_NodeType_descriptor() {
-  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_syntax_5ftree_2eproto);
-  return file_level_enum_descriptors_syntax_5ftree_2eproto[0];
-}
-bool ASTNode_NodeType_IsValid(int value) {
-  switch (value) {
+  static ::google::protobuf::Message const *const file_default_instances[] = {
+      reinterpret_cast<const ::google::protobuf::Message *>(&::syntax_tree::_ASTNode_default_instance_),
+      reinterpret_cast<const ::google::protobuf::Message *>(&::syntax_tree::_SyntaxTree_default_instance_),
+  };
+
+  void protobuf_AssignDescriptors()
+  {
+    AddDescriptors();
+    AssignDescriptors(
+        "syntax_tree.proto", schemas, file_default_instances, TableStruct::offsets,
+        file_level_metadata, file_level_enum_descriptors, NULL);
+  }
+
+  void protobuf_AssignDescriptorsOnce()
+  {
+    static ::google::protobuf::internal::once_flag once;
+    ::google::protobuf::internal::call_once(once, protobuf_AssignDescriptors);
+  }
+
+  void protobuf_RegisterTypes(const ::std::string &) GOOGLE_PROTOBUF_ATTRIBUTE_COLD;
+  void protobuf_RegisterTypes(const ::std::string &)
+  {
+    protobuf_AssignDescriptorsOnce();
+    ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 2);
+  }
+
+  void AddDescriptorsImpl()
+  {
+    InitDefaults();
+    static const char descriptor[] GOOGLE_PROTOBUF_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+        "\n\021syntax_tree.proto\022\013syntax_tree\"\276\001\n\007AST"
+        "Node\022+\n\004type\030\001 \001(\0162\035.syntax_tree.ASTNode"
+        ".NodeType\022\014\n\004name\030\002 \001(\t\022&\n\010children\030\003 \003("
+        "\0132\024.syntax_tree.ASTNode\022\r\n\005value\030\004 \001(\t\"A"
+        "\n\010NodeType\022\014\n\010FUNCTION\020\000\022\014\n\010VARIABLE\020\001\022\013"
+        "\n\007LITERAL\020\002\022\014\n\010OPERATOR\020\003\"0\n\nSyntaxTree\022"
+        "\"\n\004root\030\001 \001(\0132\024.syntax_tree.ASTNodeb\006pro"
+        "to3"};
+    ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
+        descriptor, 283);
+    ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
+        "syntax_tree.proto", &protobuf_RegisterTypes);
+  }
+
+  void AddDescriptors()
+  {
+    static ::google::protobuf::internal::once_flag once;
+    ::google::protobuf::internal::call_once(once, AddDescriptorsImpl);
+  }
+  // Force AddDescriptors() to be called at dynamic initialization time.
+  struct StaticDescriptorInitializer
+  {
+    StaticDescriptorInitializer()
+    {
+      AddDescriptors();
+    }
+  } static_descriptor_initializer;
+} // namespace protobuf_syntax_5ftree_2eproto
+namespace syntax_tree
+{
+  const ::google::protobuf::EnumDescriptor *ASTNode_NodeType_descriptor()
+  {
+    protobuf_syntax_5ftree_2eproto::protobuf_AssignDescriptorsOnce();
+    return protobuf_syntax_5ftree_2eproto::file_level_enum_descriptors[0];
+  }
+  bool ASTNode_NodeType_IsValid(int value)
+  {
+    switch (value)
+    {
     case 0:
     case 1:
     case 2:
@@ -137,796 +179,776 @@ bool ASTNode_NodeType_IsValid(int value) {
       return true;
     default:
       return false;
-  }
-}
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const ASTNode_NodeType ASTNode::FUNCTION;
-const ASTNode_NodeType ASTNode::VARIABLE;
-const ASTNode_NodeType ASTNode::LITERAL;
-const ASTNode_NodeType ASTNode::OPERATOR;
-const ASTNode_NodeType ASTNode::NodeType_MIN;
-const ASTNode_NodeType ASTNode::NodeType_MAX;
-const int ASTNode::NodeType_ARRAYSIZE;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-// ===================================================================
-
-void ASTNode::InitAsDefaultInstance() {
-}
-class ASTNode::HasBitSetters {
- public:
-};
-
-#if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int ASTNode::kTypeFieldNumber;
-const int ASTNode::kNameFieldNumber;
-const int ASTNode::kChildrenFieldNumber;
-const int ASTNode::kValueFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
-
-ASTNode::ASTNode()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:syntax_tree.ASTNode)
-}
-ASTNode::ASTNode(const ASTNode& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr),
-      children_(from.children_) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.name().size() > 0) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-  }
-  value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.value().size() > 0) {
-    value_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.value_);
-  }
-  type_ = from.type_;
-  // @@protoc_insertion_point(copy_constructor:syntax_tree.ASTNode)
-}
-
-void ASTNode::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_ASTNode_syntax_5ftree_2eproto.base);
-  name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  type_ = 0;
-}
-
-ASTNode::~ASTNode() {
-  // @@protoc_insertion_point(destructor:syntax_tree.ASTNode)
-  SharedDtor();
-}
-
-void ASTNode::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-
-void ASTNode::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const ASTNode& ASTNode::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_ASTNode_syntax_5ftree_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void ASTNode::Clear() {
-// @@protoc_insertion_point(message_clear_start:syntax_tree.ASTNode)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  children_.Clear();
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  type_ = 0;
-  _internal_metadata_.Clear();
-}
-
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* ASTNode::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<ASTNode*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .syntax_tree.ASTNode.NodeType type = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
-        msg->set_type(static_cast<::syntax_tree::ASTNode_NodeType>(val));
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // string name = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("syntax_tree.ASTNode.name");
-        object = msg->mutable_name();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      // repeated .syntax_tree.ASTNode children = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        do {
-          ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          parser_till_end = ::syntax_tree::ASTNode::_InternalParse;
-          object = msg->add_children();
-          if (size > end - ptr) goto len_delim_till_end;
-          ptr += size;
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-              {parser_till_end, object}, ptr - size, ptr));
-          if (ptr >= end) break;
-        } while ((::google::protobuf::io::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 26 && (ptr += 1));
-        break;
-      }
-      // string value = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        ctx->extra_parse_data().SetFieldName("syntax_tree.ASTNode.value");
-        object = msg->mutable_value();
-        if (size > end - ptr + ::google::protobuf::internal::ParseContext::kSlopBytes) {
-          parser_till_end = ::google::protobuf::internal::GreedyStringParserUTF8;
-          goto string_till_end;
-        }
-        GOOGLE_PROTOBUF_PARSER_ASSERT(::google::protobuf::internal::StringCheckUTF8(ptr, size, ctx));
-        ::google::protobuf::internal::InlineGreedyStringParser(object, ptr, size, ctx);
-        ptr += size;
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
-        }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-string_till_end:
-  static_cast<::std::string*>(object)->clear();
-  static_cast<::std::string*>(object)->reserve(size);
-  goto len_delim_till_end;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool ASTNode::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:syntax_tree.ASTNode)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .syntax_tree.ASTNode.NodeType type = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
-          int value = 0;
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_type(static_cast< ::syntax_tree::ASTNode_NodeType >(value));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string name = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_name()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), static_cast<int>(this->name().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "syntax_tree.ASTNode.name"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated .syntax_tree.ASTNode children = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-                input, add_children()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // string value = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_value()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->value().data(), static_cast<int>(this->value().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "syntax_tree.ASTNode.value"));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      default: {
-      handle_unusual:
-        if (tag == 0) {
-          goto success;
-        }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
-        break;
-      }
     }
   }
-success:
-  // @@protoc_insertion_point(parse_success:syntax_tree.ASTNode)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:syntax_tree.ASTNode)
-  return false;
-#undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
-void ASTNode::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:syntax_tree.ASTNode)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+  const ASTNode_NodeType ASTNode::FUNCTION;
+  const ASTNode_NodeType ASTNode::VARIABLE;
+  const ASTNode_NodeType ASTNode::LITERAL;
+  const ASTNode_NodeType ASTNode::OPERATOR;
+  const ASTNode_NodeType ASTNode::NodeType_MIN;
+  const ASTNode_NodeType ASTNode::NodeType_MAX;
+  const int ASTNode::NodeType_ARRAYSIZE;
+#endif // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-  // .syntax_tree.ASTNode.NodeType type = 1;
-  if (this->type() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      1, this->type(), output);
-  }
+  // ===================================================================
 
-  // string name = 2;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "syntax_tree.ASTNode.name");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->name(), output);
-  }
-
-  // repeated .syntax_tree.ASTNode children = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->children_size()); i < n; i++) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3,
-      this->children(static_cast<int>(i)),
-      output);
-  }
-
-  // string value = 4;
-  if (this->value().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->value().data(), static_cast<int>(this->value().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "syntax_tree.ASTNode.value");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      4, this->value(), output);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:syntax_tree.ASTNode)
-}
-
-::google::protobuf::uint8* ASTNode::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:syntax_tree.ASTNode)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .syntax_tree.ASTNode.NodeType type = 1;
-  if (this->type() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      1, this->type(), target);
-  }
-
-  // string name = 2;
-  if (this->name().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), static_cast<int>(this->name().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "syntax_tree.ASTNode.name");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->name(), target);
-  }
-
-  // repeated .syntax_tree.ASTNode children = 3;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->children_size()); i < n; i++) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, this->children(static_cast<int>(i)), target);
-  }
-
-  // string value = 4;
-  if (this->value().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->value().data(), static_cast<int>(this->value().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "syntax_tree.ASTNode.value");
-    target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        4, this->value(), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:syntax_tree.ASTNode)
-  return target;
-}
-
-size_t ASTNode::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:syntax_tree.ASTNode)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // repeated .syntax_tree.ASTNode children = 3;
+  void ASTNode::InitAsDefaultInstance()
   {
-    unsigned int count = static_cast<unsigned int>(this->children_size());
-    total_size += 1UL * count;
-    for (unsigned int i = 0; i < count; i++) {
-      total_size +=
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          this->children(static_cast<int>(i)));
-    }
   }
-
-  // string name = 2;
-  if (this->name().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->name());
-  }
-
-  // string value = 4;
-  if (this->value().size() > 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->value());
-  }
-
-  // .syntax_tree.ASTNode.NodeType type = 1;
-  if (this->type() != 0) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
-  }
-
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void ASTNode::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:syntax_tree.ASTNode)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ASTNode* source =
-      ::google::protobuf::DynamicCastToGenerated<ASTNode>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:syntax_tree.ASTNode)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:syntax_tree.ASTNode)
-    MergeFrom(*source);
-  }
-}
-
-void ASTNode::MergeFrom(const ASTNode& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:syntax_tree.ASTNode)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  children_.MergeFrom(from.children_);
-  if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
-  }
-  if (from.value().size() > 0) {
-
-    value_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.value_);
-  }
-  if (from.type() != 0) {
-    set_type(from.type());
-  }
-}
-
-void ASTNode::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:syntax_tree.ASTNode)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void ASTNode::CopyFrom(const ASTNode& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:syntax_tree.ASTNode)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool ASTNode::IsInitialized() const {
-  return true;
-}
-
-void ASTNode::Swap(ASTNode* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void ASTNode::InternalSwap(ASTNode* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  CastToBase(&children_)->InternalSwap(CastToBase(&other->children_));
-  name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  value_.Swap(&other->value_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-    GetArenaNoVirtual());
-  swap(type_, other->type_);
-}
-
-::google::protobuf::Metadata ASTNode::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_syntax_5ftree_2eproto);
-  return ::file_level_metadata_syntax_5ftree_2eproto[kIndexInFileMessages];
-}
-
-
-// ===================================================================
-
-void SyntaxTree::InitAsDefaultInstance() {
-  ::syntax_tree::_SyntaxTree_default_instance_._instance.get_mutable()->root_ = const_cast< ::syntax_tree::ASTNode*>(
-      ::syntax_tree::ASTNode::internal_default_instance());
-}
-class SyntaxTree::HasBitSetters {
- public:
-  static const ::syntax_tree::ASTNode& root(const SyntaxTree* msg);
-};
-
-const ::syntax_tree::ASTNode&
-SyntaxTree::HasBitSetters::root(const SyntaxTree* msg) {
-  return *msg->root_;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SyntaxTree::kRootFieldNumber;
-#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+  const int ASTNode::kTypeFieldNumber;
+  const int ASTNode::kNameFieldNumber;
+  const int ASTNode::kChildrenFieldNumber;
+  const int ASTNode::kValueFieldNumber;
+#endif // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-SyntaxTree::SyntaxTree()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
-  SharedCtor();
-  // @@protoc_insertion_point(constructor:syntax_tree.SyntaxTree)
-}
-SyntaxTree::SyntaxTree(const SyntaxTree& from)
-  : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from.has_root()) {
-    root_ = new ::syntax_tree::ASTNode(*from.root_);
-  } else {
-    root_ = nullptr;
+  ASTNode::ASTNode()
+      : ::google::protobuf::Message(), _internal_metadata_(NULL)
+  {
+    ::google::protobuf::internal::InitSCC(
+        &protobuf_syntax_5ftree_2eproto::scc_info_ASTNode.base);
+    SharedCtor();
+    // @@protoc_insertion_point(constructor:syntax_tree.ASTNode)
   }
-  // @@protoc_insertion_point(copy_constructor:syntax_tree.SyntaxTree)
-}
-
-void SyntaxTree::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_SyntaxTree_syntax_5ftree_2eproto.base);
-  root_ = nullptr;
-}
-
-SyntaxTree::~SyntaxTree() {
-  // @@protoc_insertion_point(destructor:syntax_tree.SyntaxTree)
-  SharedDtor();
-}
-
-void SyntaxTree::SharedDtor() {
-  if (this != internal_default_instance()) delete root_;
-}
-
-void SyntaxTree::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const SyntaxTree& SyntaxTree::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_SyntaxTree_syntax_5ftree_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void SyntaxTree::Clear() {
-// @@protoc_insertion_point(message_clear_start:syntax_tree.SyntaxTree)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  if (GetArenaNoVirtual() == nullptr && root_ != nullptr) {
-    delete root_;
+  ASTNode::ASTNode(const ASTNode &from)
+      : ::google::protobuf::Message(),
+        _internal_metadata_(NULL),
+        children_(from.children_)
+  {
+    _internal_metadata_.MergeFrom(from._internal_metadata_);
+    name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    if (from.name().size() > 0)
+    {
+      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    }
+    value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    if (from.value().size() > 0)
+    {
+      value_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.value_);
+    }
+    type_ = from.type_;
+    // @@protoc_insertion_point(copy_constructor:syntax_tree.ASTNode)
   }
-  root_ = nullptr;
-  _internal_metadata_.Clear();
-}
 
-#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* SyntaxTree::_InternalParse(const char* begin, const char* end, void* object,
-                  ::google::protobuf::internal::ParseContext* ctx) {
-  auto msg = static_cast<SyntaxTree*>(object);
-  ::google::protobuf::int32 size; (void)size;
-  int depth; (void)depth;
-  ::google::protobuf::uint32 tag;
-  ::google::protobuf::internal::ParseFunc parser_till_end; (void)parser_till_end;
-  auto ptr = begin;
-  while (ptr < end) {
-    ptr = ::google::protobuf::io::Parse32(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-    switch (tag >> 3) {
-      // .syntax_tree.ASTNode root = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ::google::protobuf::io::ReadSize(ptr, &size);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        parser_till_end = ::syntax_tree::ASTNode::_InternalParse;
-        object = msg->mutable_root();
-        if (size > end - ptr) goto len_delim_till_end;
-        ptr += size;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ctx->ParseExactRange(
-            {parser_till_end, object}, ptr - size, ptr));
-        break;
-      }
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->EndGroup(tag);
-          return ptr;
+  void ASTNode::SharedCtor()
+  {
+    name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    value_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    type_ = 0;
+  }
+
+  ASTNode::~ASTNode()
+  {
+    // @@protoc_insertion_point(destructor:syntax_tree.ASTNode)
+    SharedDtor();
+  }
+
+  void ASTNode::SharedDtor()
+  {
+    name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    value_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+
+  void ASTNode::SetCachedSize(int size) const
+  {
+    _cached_size_.Set(size);
+  }
+  const ::google::protobuf::Descriptor *ASTNode::descriptor()
+  {
+    ::protobuf_syntax_5ftree_2eproto::protobuf_AssignDescriptorsOnce();
+    return ::protobuf_syntax_5ftree_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  }
+
+  const ASTNode &ASTNode::default_instance()
+  {
+    ::google::protobuf::internal::InitSCC(&protobuf_syntax_5ftree_2eproto::scc_info_ASTNode.base);
+    return *internal_default_instance();
+  }
+
+  void ASTNode::Clear()
+  {
+    // @@protoc_insertion_point(message_clear_start:syntax_tree.ASTNode)
+    ::google::protobuf::uint32 cached_has_bits = 0;
+    // Prevent compiler warnings about cached_has_bits being unused
+    (void)cached_has_bits;
+
+    children_.Clear();
+    name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    type_ = 0;
+    _internal_metadata_.Clear();
+  }
+
+  bool ASTNode::MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream *input)
+  {
+#define DO_(EXPRESSION)                 \
+  if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) \
+  goto failure
+    ::google::protobuf::uint32 tag;
+    // @@protoc_insertion_point(parse_start:syntax_tree.ASTNode)
+    for (;;)
+    {
+      ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+      tag = p.first;
+      if (!p.second)
+        goto handle_unusual;
+      switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag))
+      {
+      // .syntax_tree.ASTNode.NodeType type = 1;
+      case 1:
+      {
+        if (static_cast<::google::protobuf::uint8>(tag) ==
+            static_cast<::google::protobuf::uint8>(8u /* 8 & 0xFF */))
+        {
+          int value;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+               int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+              input, &value)));
+          set_type(static_cast<::syntax_tree::ASTNode_NodeType>(value));
         }
-        auto res = UnknownFieldParse(tag, {_InternalParse, msg},
-          ptr, end, msg->_internal_metadata_.mutable_unknown_fields(), ctx);
-        ptr = res.first;
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        if (res.second) return ptr;
-      }
-    }  // switch
-  }  // while
-  return ptr;
-len_delim_till_end:
-  return ctx->StoreAndTailCall(ptr, end, {_InternalParse, msg},
-                               {parser_till_end, object}, size);
-}
-#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-bool SyntaxTree::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
-#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:syntax_tree.SyntaxTree)
-  for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
-    tag = p.first;
-    if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // .syntax_tree.ASTNode root = 1;
-      case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_root()));
-        } else {
+        else
+        {
           goto handle_unusual;
         }
         break;
       }
 
-      default: {
+      // string name = 2;
+      case 2:
+      {
+        if (static_cast<::google::protobuf::uint8>(tag) ==
+            static_cast<::google::protobuf::uint8>(18u /* 18 & 0xFF */))
+        {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+              input, this->mutable_name()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+              this->name().data(), static_cast<int>(this->name().length()),
+              ::google::protobuf::internal::WireFormatLite::PARSE,
+              "syntax_tree.ASTNode.name"));
+        }
+        else
+        {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated .syntax_tree.ASTNode children = 3;
+      case 3:
+      {
+        if (static_cast<::google::protobuf::uint8>(tag) ==
+            static_cast<::google::protobuf::uint8>(26u /* 26 & 0xFF */))
+        {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+              input, add_children()));
+        }
+        else
+        {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string value = 4;
+      case 4:
+      {
+        if (static_cast<::google::protobuf::uint8>(tag) ==
+            static_cast<::google::protobuf::uint8>(34u /* 34 & 0xFF */))
+        {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+              input, this->mutable_value()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+              this->value().data(), static_cast<int>(this->value().length()),
+              ::google::protobuf::internal::WireFormatLite::PARSE,
+              "syntax_tree.ASTNode.value"));
+        }
+        else
+        {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default:
+      {
       handle_unusual:
-        if (tag == 0) {
+        if (tag == 0)
+        {
           goto success;
         }
         DO_(::google::protobuf::internal::WireFormat::SkipField(
-              input, tag, _internal_metadata_.mutable_unknown_fields()));
+            input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
+      }
+    }
+  success:
+    // @@protoc_insertion_point(parse_success:syntax_tree.ASTNode)
+    return true;
+  failure:
+    // @@protoc_insertion_point(parse_failure:syntax_tree.ASTNode)
+    return false;
+#undef DO_
+  }
+
+  void ASTNode::SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream *output) const
+  {
+    // @@protoc_insertion_point(serialize_start:syntax_tree.ASTNode)
+    ::google::protobuf::uint32 cached_has_bits = 0;
+    (void)cached_has_bits;
+
+    // .syntax_tree.ASTNode.NodeType type = 1;
+    if (this->type() != 0)
+    {
+      ::google::protobuf::internal::WireFormatLite::WriteEnum(
+          1, this->type(), output);
+    }
+
+    // string name = 2;
+    if (this->name().size() > 0)
+    {
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          this->name().data(), static_cast<int>(this->name().length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "syntax_tree.ASTNode.name");
+      ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+          2, this->name(), output);
+    }
+
+    // repeated .syntax_tree.ASTNode children = 3;
+    for (unsigned int i = 0,
+                      n = static_cast<unsigned int>(this->children_size());
+         i < n; i++)
+    {
+      ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+          3,
+          this->children(static_cast<int>(i)),
+          output);
+    }
+
+    // string value = 4;
+    if (this->value().size() > 0)
+    {
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          this->value().data(), static_cast<int>(this->value().length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "syntax_tree.ASTNode.value");
+      ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+          4, this->value(), output);
+    }
+
+    if ((_internal_metadata_.have_unknown_fields() && ::google::protobuf::internal::GetProto3PreserveUnknownsDefault()))
+    {
+      ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+          (::google::protobuf::internal::GetProto3PreserveUnknownsDefault() ? _internal_metadata_.unknown_fields() : _internal_metadata_.default_instance()), output);
+    }
+    // @@protoc_insertion_point(serialize_end:syntax_tree.ASTNode)
+  }
+
+  ::google::protobuf::uint8 *ASTNode::InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8 *target) const
+  {
+    (void)deterministic; // Unused
+    // @@protoc_insertion_point(serialize_to_array_start:syntax_tree.ASTNode)
+    ::google::protobuf::uint32 cached_has_bits = 0;
+    (void)cached_has_bits;
+
+    // .syntax_tree.ASTNode.NodeType type = 1;
+    if (this->type() != 0)
+    {
+      target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+          1, this->type(), target);
+    }
+
+    // string name = 2;
+    if (this->name().size() > 0)
+    {
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          this->name().data(), static_cast<int>(this->name().length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "syntax_tree.ASTNode.name");
+      target =
+          ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+              2, this->name(), target);
+    }
+
+    // repeated .syntax_tree.ASTNode children = 3;
+    for (unsigned int i = 0,
+                      n = static_cast<unsigned int>(this->children_size());
+         i < n; i++)
+    {
+      target = ::google::protobuf::internal::WireFormatLite::
+          InternalWriteMessageToArray(
+              3, this->children(static_cast<int>(i)), deterministic, target);
+    }
+
+    // string value = 4;
+    if (this->value().size() > 0)
+    {
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          this->value().data(), static_cast<int>(this->value().length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "syntax_tree.ASTNode.value");
+      target =
+          ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+              4, this->value(), target);
+    }
+
+    if ((_internal_metadata_.have_unknown_fields() && ::google::protobuf::internal::GetProto3PreserveUnknownsDefault()))
+    {
+      target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+          (::google::protobuf::internal::GetProto3PreserveUnknownsDefault() ? _internal_metadata_.unknown_fields() : _internal_metadata_.default_instance()), target);
+    }
+    // @@protoc_insertion_point(serialize_to_array_end:syntax_tree.ASTNode)
+    return target;
+  }
+
+  size_t ASTNode::ByteSizeLong() const
+  {
+    // @@protoc_insertion_point(message_byte_size_start:syntax_tree.ASTNode)
+    size_t total_size = 0;
+
+    if ((_internal_metadata_.have_unknown_fields() && ::google::protobuf::internal::GetProto3PreserveUnknownsDefault()))
+    {
+      total_size +=
+          ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+              (::google::protobuf::internal::GetProto3PreserveUnknownsDefault() ? _internal_metadata_.unknown_fields() : _internal_metadata_.default_instance()));
+    }
+    // repeated .syntax_tree.ASTNode children = 3;
+    {
+      unsigned int count = static_cast<unsigned int>(this->children_size());
+      total_size += 1UL * count;
+      for (unsigned int i = 0; i < count; i++)
+      {
+        total_size +=
+            ::google::protobuf::internal::WireFormatLite::MessageSize(
+                this->children(static_cast<int>(i)));
+      }
+    }
+
+    // string name = 2;
+    if (this->name().size() > 0)
+    {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::StringSize(
+                        this->name());
+    }
+
+    // string value = 4;
+    if (this->value().size() > 0)
+    {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::StringSize(
+                        this->value());
+    }
+
+    // .syntax_tree.ASTNode.NodeType type = 1;
+    if (this->type() != 0)
+    {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::EnumSize(this->type());
+    }
+
+    int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+    SetCachedSize(cached_size);
+    return total_size;
+  }
+
+  void ASTNode::MergeFrom(const ::google::protobuf::Message &from)
+  {
+    // @@protoc_insertion_point(generalized_merge_from_start:syntax_tree.ASTNode)
+    GOOGLE_DCHECK_NE(&from, this);
+    const ASTNode *source =
+        ::google::protobuf::internal::DynamicCastToGenerated<const ASTNode>(
+            &from);
+    if (source == NULL)
+    {
+      // @@protoc_insertion_point(generalized_merge_from_cast_fail:syntax_tree.ASTNode)
+      ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    }
+    else
+    {
+      // @@protoc_insertion_point(generalized_merge_from_cast_success:syntax_tree.ASTNode)
+      MergeFrom(*source);
     }
   }
-success:
-  // @@protoc_insertion_point(parse_success:syntax_tree.SyntaxTree)
-  return true;
-failure:
-  // @@protoc_insertion_point(parse_failure:syntax_tree.SyntaxTree)
-  return false;
+
+  void ASTNode::MergeFrom(const ASTNode &from)
+  {
+    // @@protoc_insertion_point(class_specific_merge_from_start:syntax_tree.ASTNode)
+    GOOGLE_DCHECK_NE(&from, this);
+    _internal_metadata_.MergeFrom(from._internal_metadata_);
+    ::google::protobuf::uint32 cached_has_bits = 0;
+    (void)cached_has_bits;
+
+    children_.MergeFrom(from.children_);
+    if (from.name().size() > 0)
+    {
+
+      name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    }
+    if (from.value().size() > 0)
+    {
+
+      value_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.value_);
+    }
+    if (from.type() != 0)
+    {
+      set_type(from.type());
+    }
+  }
+
+  void ASTNode::CopyFrom(const ::google::protobuf::Message &from)
+  {
+    // @@protoc_insertion_point(generalized_copy_from_start:syntax_tree.ASTNode)
+    if (&from == this)
+      return;
+    Clear();
+    MergeFrom(from);
+  }
+
+  void ASTNode::CopyFrom(const ASTNode &from)
+  {
+    // @@protoc_insertion_point(class_specific_copy_from_start:syntax_tree.ASTNode)
+    if (&from == this)
+      return;
+    Clear();
+    MergeFrom(from);
+  }
+
+  bool ASTNode::IsInitialized() const
+  {
+    return true;
+  }
+
+  void ASTNode::Swap(ASTNode *other)
+  {
+    if (other == this)
+      return;
+    InternalSwap(other);
+  }
+  void ASTNode::InternalSwap(ASTNode *other)
+  {
+    using std::swap;
+    CastToBase(&children_)->InternalSwap(CastToBase(&other->children_));
+    name_.Swap(&other->name_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+               GetArenaNoVirtual());
+    value_.Swap(&other->value_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+                GetArenaNoVirtual());
+    swap(type_, other->type_);
+    _internal_metadata_.Swap(&other->_internal_metadata_);
+  }
+
+  ::google::protobuf::Metadata ASTNode::GetMetadata() const
+  {
+    protobuf_syntax_5ftree_2eproto::protobuf_AssignDescriptorsOnce();
+    return ::protobuf_syntax_5ftree_2eproto::file_level_metadata[kIndexInFileMessages];
+  }
+
+  // ===================================================================
+
+  void SyntaxTree::InitAsDefaultInstance()
+  {
+    ::syntax_tree::_SyntaxTree_default_instance_._instance.get_mutable()->root_ = const_cast<::syntax_tree::ASTNode *>(
+        ::syntax_tree::ASTNode::internal_default_instance());
+  }
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+  const int SyntaxTree::kRootFieldNumber;
+#endif // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+  SyntaxTree::SyntaxTree()
+      : ::google::protobuf::Message(), _internal_metadata_(NULL)
+  {
+    ::google::protobuf::internal::InitSCC(
+        &protobuf_syntax_5ftree_2eproto::scc_info_SyntaxTree.base);
+    SharedCtor();
+    // @@protoc_insertion_point(constructor:syntax_tree.SyntaxTree)
+  }
+  SyntaxTree::SyntaxTree(const SyntaxTree &from)
+      : ::google::protobuf::Message(),
+        _internal_metadata_(NULL)
+  {
+    _internal_metadata_.MergeFrom(from._internal_metadata_);
+    if (from.has_root())
+    {
+      root_ = new ::syntax_tree::ASTNode(*from.root_);
+    }
+    else
+    {
+      root_ = NULL;
+    }
+    // @@protoc_insertion_point(copy_constructor:syntax_tree.SyntaxTree)
+  }
+
+  void SyntaxTree::SharedCtor()
+  {
+    root_ = NULL;
+  }
+
+  SyntaxTree::~SyntaxTree()
+  {
+    // @@protoc_insertion_point(destructor:syntax_tree.SyntaxTree)
+    SharedDtor();
+  }
+
+  void SyntaxTree::SharedDtor()
+  {
+    if (this != internal_default_instance())
+      delete root_;
+  }
+
+  void SyntaxTree::SetCachedSize(int size) const
+  {
+    _cached_size_.Set(size);
+  }
+  const ::google::protobuf::Descriptor *SyntaxTree::descriptor()
+  {
+    ::protobuf_syntax_5ftree_2eproto::protobuf_AssignDescriptorsOnce();
+    return ::protobuf_syntax_5ftree_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+  }
+
+  const SyntaxTree &SyntaxTree::default_instance()
+  {
+    ::google::protobuf::internal::InitSCC(&protobuf_syntax_5ftree_2eproto::scc_info_SyntaxTree.base);
+    return *internal_default_instance();
+  }
+
+  void SyntaxTree::Clear()
+  {
+    // @@protoc_insertion_point(message_clear_start:syntax_tree.SyntaxTree)
+    ::google::protobuf::uint32 cached_has_bits = 0;
+    // Prevent compiler warnings about cached_has_bits being unused
+    (void)cached_has_bits;
+
+    if (GetArenaNoVirtual() == NULL && root_ != NULL)
+    {
+      delete root_;
+    }
+    root_ = NULL;
+    _internal_metadata_.Clear();
+  }
+
+  bool SyntaxTree::MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream *input)
+  {
+#define DO_(EXPRESSION)                 \
+  if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) \
+  goto failure
+    ::google::protobuf::uint32 tag;
+    // @@protoc_insertion_point(parse_start:syntax_tree.SyntaxTree)
+    for (;;)
+    {
+      ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+      tag = p.first;
+      if (!p.second)
+        goto handle_unusual;
+      switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag))
+      {
+      // .syntax_tree.ASTNode root = 1;
+      case 1:
+      {
+        if (static_cast<::google::protobuf::uint8>(tag) ==
+            static_cast<::google::protobuf::uint8>(10u /* 10 & 0xFF */))
+        {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+              input, mutable_root()));
+        }
+        else
+        {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default:
+      {
+      handle_unusual:
+        if (tag == 0)
+        {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+            input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+      }
+    }
+  success:
+    // @@protoc_insertion_point(parse_success:syntax_tree.SyntaxTree)
+    return true;
+  failure:
+    // @@protoc_insertion_point(parse_failure:syntax_tree.SyntaxTree)
+    return false;
 #undef DO_
-}
-#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-
-void SyntaxTree::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:syntax_tree.SyntaxTree)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // .syntax_tree.ASTNode root = 1;
-  if (this->has_root()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, HasBitSetters::root(this), output);
   }
 
-  if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
-        _internal_metadata_.unknown_fields(), output);
-  }
-  // @@protoc_insertion_point(serialize_end:syntax_tree.SyntaxTree)
-}
+  void SyntaxTree::SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream *output) const
+  {
+    // @@protoc_insertion_point(serialize_start:syntax_tree.SyntaxTree)
+    ::google::protobuf::uint32 cached_has_bits = 0;
+    (void)cached_has_bits;
 
-::google::protobuf::uint8* SyntaxTree::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:syntax_tree.SyntaxTree)
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
+    // .syntax_tree.ASTNode root = 1;
+    if (this->has_root())
+    {
+      ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+          1, this->_internal_root(), output);
+    }
 
-  // .syntax_tree.ASTNode root = 1;
-  if (this->has_root()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        1, HasBitSetters::root(this), target);
-  }
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields(), target);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:syntax_tree.SyntaxTree)
-  return target;
-}
-
-size_t SyntaxTree::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:syntax_tree.SyntaxTree)
-  size_t total_size = 0;
-
-  if (_internal_metadata_.have_unknown_fields()) {
-    total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
-        _internal_metadata_.unknown_fields());
-  }
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // .syntax_tree.ASTNode root = 1;
-  if (this->has_root()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *root_);
+    if ((_internal_metadata_.have_unknown_fields() && ::google::protobuf::internal::GetProto3PreserveUnknownsDefault()))
+    {
+      ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+          (::google::protobuf::internal::GetProto3PreserveUnknownsDefault() ? _internal_metadata_.unknown_fields() : _internal_metadata_.default_instance()), output);
+    }
+    // @@protoc_insertion_point(serialize_end:syntax_tree.SyntaxTree)
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
+  ::google::protobuf::uint8 *SyntaxTree::InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8 *target) const
+  {
+    (void)deterministic; // Unused
+    // @@protoc_insertion_point(serialize_to_array_start:syntax_tree.SyntaxTree)
+    ::google::protobuf::uint32 cached_has_bits = 0;
+    (void)cached_has_bits;
 
-void SyntaxTree::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:syntax_tree.SyntaxTree)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SyntaxTree* source =
-      ::google::protobuf::DynamicCastToGenerated<SyntaxTree>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:syntax_tree.SyntaxTree)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:syntax_tree.SyntaxTree)
-    MergeFrom(*source);
+    // .syntax_tree.ASTNode root = 1;
+    if (this->has_root())
+    {
+      target = ::google::protobuf::internal::WireFormatLite::
+          InternalWriteMessageToArray(
+              1, this->_internal_root(), deterministic, target);
+    }
+
+    if ((_internal_metadata_.have_unknown_fields() && ::google::protobuf::internal::GetProto3PreserveUnknownsDefault()))
+    {
+      target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+          (::google::protobuf::internal::GetProto3PreserveUnknownsDefault() ? _internal_metadata_.unknown_fields() : _internal_metadata_.default_instance()), target);
+    }
+    // @@protoc_insertion_point(serialize_to_array_end:syntax_tree.SyntaxTree)
+    return target;
   }
-}
 
-void SyntaxTree::MergeFrom(const SyntaxTree& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:syntax_tree.SyntaxTree)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
+  size_t SyntaxTree::ByteSizeLong() const
+  {
+    // @@protoc_insertion_point(message_byte_size_start:syntax_tree.SyntaxTree)
+    size_t total_size = 0;
 
-  if (from.has_root()) {
-    mutable_root()->::syntax_tree::ASTNode::MergeFrom(from.root());
+    if ((_internal_metadata_.have_unknown_fields() && ::google::protobuf::internal::GetProto3PreserveUnknownsDefault()))
+    {
+      total_size +=
+          ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+              (::google::protobuf::internal::GetProto3PreserveUnknownsDefault() ? _internal_metadata_.unknown_fields() : _internal_metadata_.default_instance()));
+    }
+    // .syntax_tree.ASTNode root = 1;
+    if (this->has_root())
+    {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(
+                        *root_);
+    }
+
+    int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+    SetCachedSize(cached_size);
+    return total_size;
   }
-}
 
-void SyntaxTree::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:syntax_tree.SyntaxTree)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
+  void SyntaxTree::MergeFrom(const ::google::protobuf::Message &from)
+  {
+    // @@protoc_insertion_point(generalized_merge_from_start:syntax_tree.SyntaxTree)
+    GOOGLE_DCHECK_NE(&from, this);
+    const SyntaxTree *source =
+        ::google::protobuf::internal::DynamicCastToGenerated<const SyntaxTree>(
+            &from);
+    if (source == NULL)
+    {
+      // @@protoc_insertion_point(generalized_merge_from_cast_fail:syntax_tree.SyntaxTree)
+      ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    }
+    else
+    {
+      // @@protoc_insertion_point(generalized_merge_from_cast_success:syntax_tree.SyntaxTree)
+      MergeFrom(*source);
+    }
+  }
 
-void SyntaxTree::CopyFrom(const SyntaxTree& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:syntax_tree.SyntaxTree)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
+  void SyntaxTree::MergeFrom(const SyntaxTree &from)
+  {
+    // @@protoc_insertion_point(class_specific_merge_from_start:syntax_tree.SyntaxTree)
+    GOOGLE_DCHECK_NE(&from, this);
+    _internal_metadata_.MergeFrom(from._internal_metadata_);
+    ::google::protobuf::uint32 cached_has_bits = 0;
+    (void)cached_has_bits;
 
-bool SyntaxTree::IsInitialized() const {
-  return true;
-}
+    if (from.has_root())
+    {
+      mutable_root()->::syntax_tree::ASTNode::MergeFrom(from.root());
+    }
+  }
 
-void SyntaxTree::Swap(SyntaxTree* other) {
-  if (other == this) return;
-  InternalSwap(other);
-}
-void SyntaxTree::InternalSwap(SyntaxTree* other) {
-  using std::swap;
-  _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(root_, other->root_);
-}
+  void SyntaxTree::CopyFrom(const ::google::protobuf::Message &from)
+  {
+    // @@protoc_insertion_point(generalized_copy_from_start:syntax_tree.SyntaxTree)
+    if (&from == this)
+      return;
+    Clear();
+    MergeFrom(from);
+  }
 
-::google::protobuf::Metadata SyntaxTree::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_syntax_5ftree_2eproto);
-  return ::file_level_metadata_syntax_5ftree_2eproto[kIndexInFileMessages];
-}
+  void SyntaxTree::CopyFrom(const SyntaxTree &from)
+  {
+    // @@protoc_insertion_point(class_specific_copy_from_start:syntax_tree.SyntaxTree)
+    if (&from == this)
+      return;
+    Clear();
+    MergeFrom(from);
+  }
 
+  bool SyntaxTree::IsInitialized() const
+  {
+    return true;
+  }
 
-// @@protoc_insertion_point(namespace_scope)
-}  // namespace syntax_tree
-namespace google {
-namespace protobuf {
-template<> PROTOBUF_NOINLINE ::syntax_tree::ASTNode* Arena::CreateMaybeMessage< ::syntax_tree::ASTNode >(Arena* arena) {
-  return Arena::CreateInternal< ::syntax_tree::ASTNode >(arena);
-}
-template<> PROTOBUF_NOINLINE ::syntax_tree::SyntaxTree* Arena::CreateMaybeMessage< ::syntax_tree::SyntaxTree >(Arena* arena) {
-  return Arena::CreateInternal< ::syntax_tree::SyntaxTree >(arena);
-}
-}  // namespace protobuf
-}  // namespace google
+  void SyntaxTree::Swap(SyntaxTree *other)
+  {
+    if (other == this)
+      return;
+    InternalSwap(other);
+  }
+  void SyntaxTree::InternalSwap(SyntaxTree *other)
+  {
+    using std::swap;
+    swap(root_, other->root_);
+    _internal_metadata_.Swap(&other->_internal_metadata_);
+  }
+
+  ::google::protobuf::Metadata SyntaxTree::GetMetadata() const
+  {
+    protobuf_syntax_5ftree_2eproto::protobuf_AssignDescriptorsOnce();
+    return ::protobuf_syntax_5ftree_2eproto::file_level_metadata[kIndexInFileMessages];
+  }
+
+  // @@protoc_insertion_point(namespace_scope)
+} // namespace syntax_tree
+namespace google
+{
+  namespace protobuf
+  {
+    template <>
+    GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::syntax_tree::ASTNode *Arena::CreateMaybeMessage<::syntax_tree::ASTNode>(Arena *arena)
+    {
+      return Arena::CreateInternal<::syntax_tree::ASTNode>(arena);
+    }
+    template <>
+    GOOGLE_PROTOBUF_ATTRIBUTE_NOINLINE ::syntax_tree::SyntaxTree *Arena::CreateMaybeMessage<::syntax_tree::SyntaxTree>(Arena *arena)
+    {
+      return Arena::CreateInternal<::syntax_tree::SyntaxTree>(arena);
+    }
+  } // namespace protobuf
+} // namespace google
 
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>

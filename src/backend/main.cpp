@@ -3,7 +3,9 @@
 #include <llvm/IR/Module.h>
 #include <llvm/Support/TargetSelect.h>
 #include <llvm/Support/raw_ostream.h>
-
+#include <iostream>
+#include <fstream>
+#include "syntax_tree.pb.h"
 int main()
 {
     // Initialize the LLVM infrastructure
@@ -11,6 +13,32 @@ int main()
     llvm::InitializeNativeTargetAsmPrinter();
     llvm::InitializeNativeTargetAsmParser();
 
+    // Read the serialized data from the file
+    // Open the binary file written by the Rust code
+    std::ifstream input("syntax_tree.bin", std::ios::in | std::ios::binary);
+    if (!input)
+    {
+        std::cerr << "Failed to open syntax_tree.bin" << std::endl;
+        return -1;
+    }
+
+    // Deserialize the data
+    syntax_tree::SyntaxTree tree;
+    if (!tree.ParseFromIstream(&input))
+    {
+        std::cerr << "Failed to parse syntax tree from file" << std::endl;
+        return -1;
+    }
+
+    // Access the deserialized data
+    if (tree.has_root())
+    {
+        const syntax_tree::ASTNode &node = tree.root();
+        std::cout << "Root node name: " << node.name() << std::endl;
+        // Further processing...
+    }
+
+    return 0;
     // Create a new LLVM context
     llvm::LLVMContext context;
 
